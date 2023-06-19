@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configuración del usuario">
+    <meta name="keywords" content="configuración, usuario">
+    <title>Configuración del usuario</title>
+    <link rel="shortcut icon" href="./nin.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/css.css">
+    <body>
+        
+ <!-- Header -->
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"><a href="../inicio de sesion/index.html"> <img src="../img/logo.png" class="logo"></a> <a class="navbar-brand" href="">
+            </a> <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"></li>
+                <li class="nav-item"> <a class="nav-link" href="#" style="color: #dd7b79;">Productos</a> </li>
+                
+                <li class="nav-item"> <a class="nav-link" href="./administrador/index.html"
+                        style="color: #dd7b79;"></a> </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 mx-auto" id="search-form"> <input class="form-control mr-sm-2"
+                    type="search" placeholder="Buscar productos" aria-label="Search" id="search-input"> <button
+                    class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button> </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img
+                            src="../img/perfil.jpg" alt="Imagen de usuario"
+                            style="width: 50px; height: 50px; border-radius: 50%;"> </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item"
+                            href="">configuración</a>
+                        <div class="dropdown-divider"></div> <a class="dropdown-item" href="../index.html">cerrar
+                            sesion</a>
+                    </div>
+                </li>
+                <li class="nav-item"> <a class="nav-link" href="./" style="color: #dd7b79;">Carrito (<span
+                            id="cart-count">0</span>)</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid text-center" style="background-color: #dbdedc; min-width: 300px;">
+        <div class="container">
+            <h1 class="display-3" style="color: #dd7b79;">configuracion de perfil!</h1>
+            <p class="lead">configura tu perfil.</p>
+            <hr class="my-4">
+          
+        </div>
+    </div>
+</header>
+    
+    <style>
+    
+    </style>
+</head>
+
+<body>
+    <header class="visually-hidden">
+        <h1>Configuración del usuario</h1>
+    </header>
+    <main class="container">
+        <h2>Configuración del usuario</h2>
+
+        <!-- Agregamos el menú -->
+        <ul id="user-settings-menu">
+            <li><a href="#" data-target="change-password">Cambiar contraseña</a></li>
+            <li><a href="#" data-target="change-profile-photo">Cambiar foto de perfil</a></li>
+            <li><a href="#" data-target="change-personal-data">Cambiar datos personales</a></li>
+        </ul>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="user-settings-option" id="change-password">
+                    <h3>Cambiar contraseña</h3>
+                    <form>
+                        <label for="current-password">Contraseña actual:</label>
+                        <input type="password" id="current-password" name="current-password">
+                        <label for="new-password">Nueva contraseña:</label>
+                        <input type="password" id="new-password" name="new-password">
+                        <label for="confirm-new-password">Confirmar nueva contraseña:</label>
+                        <input type="password" id="confirm-new-password" name="confirm-new-password">
+                        <button type="submit">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="user-settings-option" id="change-profile-photo">
+                    <h3>Cambiar foto de perfil</h3>
+                    <form>
+                        <label for="profile-photo">Seleccionar foto:</label>
+                        <input type="file" id="profile-photo" name="profile-photo" accept="image/*">
+                        <button type="submit">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="user-settings-option" id="change-personal-data">
+                    <h3>Cambiar datos personales</h3>
+                    <form>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="visually-hidden">
+        <p>Configuración del usuario</p>
+    </footer>
+
+    <script>
+        // Agregamos un evento click a cada opción del menú
+        var menuItems = document.querySelectorAll('#user-settings-menu li a');
+        menuItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = this.dataset.target;
+
+                // Ocultamos todos los formularios
+                var forms = document.querySelectorAll('.user-settings-option');
+                forms.forEach(function(form) {
+                    form.style.display = 'none';
+                });
+
+                // Mostramos el formulario correspondiente
+                var formToShow = document.getElementById(target);
+                formToShow.style.display = 'block';
+            });
+        });
+    </script>
+      <!-- Footer -->
+      <footer class="text-center" style="background-color: #dbdedc; min-width: 300px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Contactanos</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope"></i> contacto@ninimakeup.com</li>
+                        <li><i class="fas fa-phone"></i> +1 123-456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Siguenos</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Terminos y condiciones</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                        <li><a href="#">Términos de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; 2023 Nini Make-up. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

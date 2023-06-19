@@ -1,0 +1,252 @@
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border-color: #dd7b79;
+  box-shadow: none;
+}
+
+.form-text {
+  font-size: 14px;
+  color: #777;
+}
+
+.form-check-label {
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #dd7b79;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c96f6d;
+}
+
+
+
+
+/* Color de fondo del botón de carrito */
+#cart-button {
+  background-color: #dd7b79;
+  border-color: #dd7b79;
+}
+
+/* Color de texto del botón de carrito */
+#cart-button {
+  color: #fff;
+}
+
+/* Color de fondo de los elementos del menú desplegable */
+.dropdown-menu {
+  background-color: #f8d7da;
+}
+
+/* Color de fondo de los elementos activos del menú desplegable */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #dd7b79;
+}
+
+/* Color de texto de los elementos del menú desplegable */
+.dropdown-item {
+  color: #000;
+}
+
+/* Color de texto de los elementos activos del menú desplegable */
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+}
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.btn{
+  background-color: #dd7b79;
+}
+/* Estilos del encabezado */
+header {
+  background-color: #dbdedc;
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  color: #dd7b79;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.nav-link:hover {
+  color: #dd7b79;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+/* Estilos del jumbotron */
+.jumbotron {
+  background-color: #dbdedc;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.display-3 {
+  color: #dd7b79;
+}
+
+.lead {
+  color: #000;
+}
+
+.btn-primary {
+  background-color: #dd7b79;
+  border-color: #dd7b79;
+}
+
+.btn-primary:hover {
+  background-color: #c26966;
+  border-color: #c26966;
+}
+
+.btn-secondary {
+  background-color: #dbdedc;
+  border-color: #dbdedc;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background-color: #c3c6c4;
+  border-color: #c3c6c4;
+  color: #000;
+}
+
+/* Estilos de la sección de categorías */
+aside {
+  background-color: #d89595;
+  padding: 20px;
+}
+
+.text-center {
+  color: #d89595;
+}
+
+.list-group-item {
+  background-color: #dbdedc;
+  border-color: #dbdedc;
+}
+
+.list-group-item a {
+  color: #000;
+}
+
+.list-group-item a:hover {
+  color: #dd7b79;
+}
+
+/* Estilos de la sección de productos destacados */
+.col-md-9 {
+  color: #e28f8f;
+}
+
+.card {
+  border-color: #e28f8f;
+}
+
+.card-title {
+  color: #e28f8f;
+}
+
+.card-text {
+  color: #000;
+}
+
+.btn-primary {
+  background-color: #dd7b79;
+  border-color: #dd7b79;
+}
+
+.btn-primary:hover {
+  background-color: #c26966;
+  border-color: #c26966;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #f7b9b9;
+  color: #000;
+  padding: 40px 0;
+}
+
+.text-uppercase {
+  color: #dd7b79;
+}
+
+.text-dark {
+  color: #000;
+}
+
+.text-dark:hover {
+  color: #dd7b79;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  height: 75px;
+  
+}
+
+.logo{
+  height: 75px;
+  
+}
